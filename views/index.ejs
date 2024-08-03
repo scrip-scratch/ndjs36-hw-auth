@@ -1,0 +1,13 @@
+<%- include('./layout/layout-start', {title: "Главная"}) %>
+
+<div class="container d-flex justify-content-center flex-column mt-5">
+  <% if (!user) { %>
+  <h3>Главная</h3>
+  <p class="mt-3">Пожалуйста, <a href="/api/user/login"> авторизуйтесь </a> или <a href="/api/user/reg"> зарегистрируйтесь</a></p>
+  <% } else { %>
+  <h3>Привет, <%= user.username %>. </h3>
+  <p class="mt-3">Перейти в <a href="/api/user/me">профиль</a>.</p>
+  <% } %>
+</div>
+
+<%- include('./layout/layout-end') %>

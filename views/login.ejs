@@ -1,0 +1,22 @@
+<%- include('./layout/layout-start', {title: "Войти"}) %>
+
+<div class="container d-flex justify-content-center flex-column mt-5">
+  <h3>Авторизация</h3>
+  <form action="/api/user/login" method="post">
+    <div>
+      <label>Логин:</label>
+      <input type="text" name="username" />
+      <br />
+    </div>
+    <div class="mt-2">
+      <label>Пароль:</label>
+      <input type="password" name="password" />
+    </div>
+    <div class="mt-2">
+      <input type="submit" value="Войти" />
+    </div>
+  </form>
+</div>
+
+
+<%- include('./layout/layout-end') %>
